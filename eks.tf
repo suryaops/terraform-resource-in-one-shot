@@ -15,9 +15,9 @@ resource "aws_eks_node_group" "cloudpunch" {
   subnet_ids      = aws_subnet.cloudpunch_subnet[*].id
 
   scaling_config {
-    desired_size = 3
-    max_size     = 3
-    min_size     = 3
+    desired_size = 2
+    max_size     = 2
+    min_size     = 1
   }
 
   instance_types = ["t2.medium"]
